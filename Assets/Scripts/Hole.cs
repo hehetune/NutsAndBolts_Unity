@@ -4,41 +4,46 @@ using UnityEngine;
 
 public class Hole : MonoBehaviour
 {
-    [SerializeField] private Nut _curNut = null;
+    [SerializeField] private Nut _currentNut = null;
 
     private void Start()
     {
-        DetectNutInside();
+        CreateJointForNuts();
     }
 
-    private void DetectNutInside()
+    private void CreateJointForNuts()
     {
-        Vector2 position = new Vector2(transform.position.x, transform.position.y); // Vị trí của game object
-        Vector2 direction = Vector2.zero; // Hướng của ray
-
-        // Cast một ray từ vị trí của game object theo hướng
-        RaycastHit2D[] hits = Physics2D.RaycastAll(position, direction);
+        Vector2 position = new Vector2(transform.position.x, transform.position.y);
+        RaycastHit2D[] hits = Physics2D.RaycastAll(position, Vector2.zero);
 
         foreach (RaycastHit2D hit in hits)
         {
             Nut nut = hit.transform.GetComponent<Nut>();
             if (nut != null)
             {
-                this._curNut = nut;
-                this._curNut.CurHole = this;
-                break; // Dừng vòng lặp nếu tìm thấy đối tượng
+                AssignNut(nut);
+                break;
             }
         }
     }
 
-    public void SelectThis(PlayerController playerController)
+    public void AssignNut(Nut nut)
     {
-        if (this._curNut && !this._curNut.IsUp) playerController.SelectNut(this._curNut);
-        else playerController.SelectHole(this);
+        _currentNut = nut;
     }
 
-    public void SetNut(Nut nut)
+    public void SelectThis(PlayerController playerController)
     {
-        this._curNut = nut;
+        if (_currentNut && !_currentNut.IsUp)
+            playerController.SelectNut(_currentNut);
+        else
+            playerController.SelectHole(this);
+    }
+
+    
+
+    public void RemoveNut()
+    {
+        _currentNut = null;
     }
 }

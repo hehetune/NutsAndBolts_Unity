@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: db67a2fc95361794884f6cf68a3a795a
+guid: 8a7504cdedc28694ba274bb0c7505bd7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -44,15 +44,15 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 88, y: 0, z: 88, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
+  spriteTessellationDetail: 0
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -105,10 +105,54 @@ TextureImporter:
     serializedVersion: 2
     sprites: []
     outline: []
-    physicsShape: []
+    physicsShape:
+    - - {x: -224.5, y: 46}
+      - {x: -224.5, y: -46}
+      - {x: 224.5, y: -46}
+      - {x: 224.5, y: 46}
+    - - {x: -189.5, y: -25}
+      - {x: -197.5, y: -17}
+      - {x: -201.5, y: -7}
+      - {x: -202.5, y: 6}
+      - {x: -201.5, y: 7}
+      - {x: -197.5, y: 17}
+      - {x: -189.5, y: 25}
+      - {x: -179.5, y: 29}
+      - {x: -166.5, y: 30}
+      - {x: -165.5, y: 29}
+      - {x: -155.5, y: 25}
+      - {x: -147.5, y: 17}
+      - {x: -143.5, y: 7}
+      - {x: -142.5, y: -6}
+      - {x: -143.5, y: -7}
+      - {x: -147.5, y: -17}
+      - {x: -155.5, y: -25}
+      - {x: -165.5, y: -29}
+      - {x: -178.5, y: -30}
+      - {x: -179.5, y: -29}
+    - - {x: 155.5, y: -25}
+      - {x: 147.5, y: -17}
+      - {x: 143.5, y: -7}
+      - {x: 142.5, y: 6}
+      - {x: 143.5, y: 7}
+      - {x: 147.5, y: 17}
+      - {x: 155.5, y: 25}
+      - {x: 165.5, y: 29}
+      - {x: 178.5, y: 30}
+      - {x: 179.5, y: 29}
+      - {x: 189.5, y: 25}
+      - {x: 197.5, y: 17}
+      - {x: 201.5, y: 7}
+      - {x: 202.5, y: -6}
+      - {x: 201.5, y: -7}
+      - {x: 197.5, y: -17}
+      - {x: 189.5, y: -25}
+      - {x: 179.5, y: -29}
+      - {x: 166.5, y: -30}
+      - {x: 165.5, y: -29}
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
